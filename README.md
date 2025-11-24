@@ -24,6 +24,10 @@
 ***
 ### 2. Código de scala que integra por regla de simpson:
 
+El siguiente código ha sido generado por ia generativa con el siguiente pront: 
+
+### "Dada la regla de simpson 1/3 dame un código en Scala de manera funcion usando .map .sum y funciones de orden superior, no utilices funciones curried, usa la funcion extension para utilizar la misma funcion para diferentes integrales definidas"
+
 ~~~
     extension (a: Double) {
         def integrateSimpsons(b: Double, f: Double => Double): Double = {
