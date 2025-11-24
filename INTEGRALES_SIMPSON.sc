@@ -1,10 +1,10 @@
 extension (a: Double) {
   def integrateSimpsons(b: Double, f: Double => Double): Double = {
-    val x_mitad = (a + b) / 2.0
-    val fa = f(a)
-    val fx_mitad = f(x_mitad)
-    val fb = f(b)
-    val simpson_sum = fa + 4 * fx_mitad + fb
+    val x_mitad:Double = (a + b) / 2.0
+    val fa:Double = f(a)
+    val fx_mitad:Double = f(x_mitad)
+    val fb:Double = f(b)
+    val simpson_sum:Double = fa + 4 * fx_mitad + fb
     (b - a) * (simpson_sum / 6.0)
   }
 }
@@ -17,7 +17,7 @@ def f1(x:Double) : Double = - (x * x) + 8 * x - 12
 val a1 : Double = 3.0
 val b1 : Double = 5.0
 val valorIntegral: Double = a1.integrateSimpsons(b1, f1)
-val error: Double = calculoError(22 / 3, valorIntegral)
+val error: Double = calculoError(22/3, valorIntegral)
 
 def f2(x:Double) : Double = 3*x*x
 val a2 : Double = 0
@@ -43,7 +43,7 @@ val b5 : Double = 1
 val valor5: Double = a5.integrateSimpsons(b5, f5)
 val error5: Double = calculoError(1.71828, valor5)
 
-def f6(x:Double) : Double = 1/(Math.sqrt(x-1))
+def f6(x:Double) : Double = 1/Math.sqrt(x-1)
 val a6 : Double = 2
 val b6 : Double = 3
 val valor6:Double = a6.integrateSimpsons(b6,f6)
