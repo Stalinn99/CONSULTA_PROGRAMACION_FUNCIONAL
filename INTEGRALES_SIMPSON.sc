@@ -17,13 +17,13 @@ def f1(x:Double) : Double = - (x * x) + 8 * x - 12
 val a1 : Double = 3.0
 val b1 : Double = 5.0
 val valorIntegral: Double = a1.integrateSimpsons(b1, f1)
-val error: Double = calculoError(22/3, valorIntegral)
+val error: Double = calculoError(22.0/3.0, valorIntegral)
 
 def f2(x:Double) : Double = 3*x*x
 val a2 : Double = 0
 val b2 : Double = 2
 val valor2: Double = a2.integrateSimpsons(b2, f2)
-val error2: Double = calculoError(8, valor2)
+val error2: Double = calculoError(8.0, valor2)
 
 def f3(x:Double) : Double = x + 2*x*x - x*x*x + 5*x*x*x*x
 val a3: Double = -1
