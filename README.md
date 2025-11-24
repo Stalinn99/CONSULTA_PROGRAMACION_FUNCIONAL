@@ -5,17 +5,20 @@
 
     - El tipo de dato que devolverá la función integracion
 
-        **El tipo de dato que nos va a devolver la función de integración va a ser un Double (valor numérico real)**
+        El tipo de dato que nos va a devolver la función de integración va a ser un Double (valor numérico real)
 
     - ¿Cuáles son los parámetros que recibe la función?
 
-        **Los parámetros que va a recibir la función "integranteSimpsons" son 3:** 
+        Los parámetros que va a recibir la función "integranteSimpsons" son 3:
 
-        * "a" (Double) es el límite inferior
-        * "b" (Double) es el límite superior
-        * "f" (Double => Double) es la función dada
+        "a" (Double) es el límite inferior
+
+        "b" (Double) es el límite superior
+    
+        "f" (Double => Double) es la función dada
     
     - Elaborar una función que determine el error en el cálculo, de la siguiente manera : 
+
 <p style="text-align:center;">|valor esperado - valorObtenido|</p> 
 
 ***
