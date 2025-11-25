@@ -44,7 +44,7 @@ El siguiente código ha sido generado por ia generativa con el siguiente pront:
             val fb:Double = f(b)
             val simpson_sum:Double = fa + 4 * fx_mitad + fb
             (b - a) * (simpson_sum / 6.0)
-  }
+    }
 }
 ```
 ***
