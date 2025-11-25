@@ -36,14 +36,14 @@ El siguiente código ha sido generado por ia generativa con el siguiente pront:
 ### "Dada la regla de simpson 1/3 dame un código en Scala de manera funcion usando .map .sum y funciones de orden superior, no utilices funciones curried, usa la funcion extension para utilizar la misma funcion para diferentes integrales definidas"
 
 ``` Scala
-    extension (a: Double) {
-        def integrateSimpsons(b: Double, f: Double => Double): Double = {
-            val x_mitad:Double = (a + b) / 2.0
-            val fa:Double = f(a)
-            val fx_mitad:Double = f(x_mitad)
-            val fb:Double = f(b)
-            val simpson_sum:Double = fa + 4 * fx_mitad + fb
-            (b - a) * (simpson_sum / 6.0)
+extension (a: Double) {
+    def integrateSimpsons(b: Double, f: Double => Double): Double = {
+        val x_mitad:Double = (a + b) / 2.0
+        val fa:Double = f(a)
+        val fx_mitad:Double = f(x_mitad)
+        val fb:Double = f(b)
+        val simpson_sum:Double = fa + 4 * fx_mitad + fb
+        (b - a) * (simpson_sum / 6.0)
     }
 }
 ```
