@@ -1,23 +1,30 @@
-## CONSULTA DE PROGRAMACION FUNCIONAL
-### INTEGRACION POR REGLA DE SIMPSON
-*** 
+## <p style="text-align:center;">CONSULTA PROGRAMACIÓN FUNCIONAL</p>
+### <p style="text-align:center;">INTEGRACIÓN POR REGLA DE SIMPSON 1/3</p> 
+
+***
 ### 1.  Criterio para realizar el código
+ 
+- Observar la integral 
 
-    - El tipo de dato que devolverá la función integracion
+    $$\int_{a}^{b}f(x)dx \cong (b-a) \frac{f(a) + 4f(\overline{x}) + f(b)}{6}$$
 
-        El tipo de dato que nos va a devolver la función de integración va a ser un Double (valor numérico real)
+-  El tipo de dato que devolverá la función integracion
 
-    - ¿Cuáles son los parámetros que recibe la función?
+    - El tipo de dato que nos va a devolver la función de       integración va a ser un Double (valor numérico real)
 
-        Los parámetros que va a recibir la función "integranteSimpsons" son 3:
+    - El tipo de dato que nos va a devolver 
 
-        "a" (Double) es el límite inferior
+- ¿Cuáles son los parámetros que recibe la función?
 
-        "b" (Double) es el límite superior
+    - Los parámetros que va a recibir la función "integranteSimpsons" son 3:
+
+    - "a" (Double) es el límite inferior
+
+    - "b" (Double) es el límite superior
     
-        "f" (Double => Double) es la función dada
+    - "f" (Double => Double) es la función dada
     
-    - Elaborar una función que determine el error en el cálculo, de la siguiente manera : 
+- Elaborar una función que determine el error en el cálculo, de la siguiente manera : 
 
 <p style="text-align:center;">|valor esperado - valorObtenido|</p> 
 
@@ -27,7 +34,8 @@
 El siguiente código ha sido generado por ia generativa con el siguiente pront: 
 
 ### "Dada la regla de simpson 1/3 dame un código en Scala de manera funcion usando .map .sum y funciones de orden superior, no utilices funciones curried, usa la funcion extension para utilizar la misma funcion para diferentes integrales definidas"
-~~~
+
+``` Scala
     extension (a: Double) {
         def integrateSimpsons(b: Double, f: Double => Double): Double = {
             val x_mitad:Double = (a + b) / 2.0
@@ -38,7 +46,7 @@ El siguiente código ha sido generado por ia generativa con el siguiente pront:
             (b - a) * (simpson_sum / 6.0)
   }
 }
-~~~
+```
 ***
 ### 3. Explicación del código en Scala 
 
@@ -76,7 +84,9 @@ Aquí se define el nuevo método:
 ***
 ### 4.  Uso del código 
 
-`def f1(x:Double) : Double = - (x * x) + 8 * x - 12` definimos la funcion a integrar
+`def f1(x:Double) : Double = - (x * x) + 8 * x - 12` 
+
+definimos la funcion a integrar
 
 `val a1 : Double = 3.0`definimos el límite inferior
 
@@ -88,10 +98,10 @@ Aquí se define el nuevo método:
 ### 5.  Cálculo de error 
 
 Para calcular el error implementamos una función en scala que nos permita encontrar
-~~~
+``` Scala
 def calculoError(esperado: Double, obtenido: Double): Double = {
   Math.abs(esperado - obtenido)
 }
-~~~
+```
 
 Para "usar" la función del cálculo de error simplemente le mandamos los paramétros que son el valor esperado (calculado anteiormente) y el valor dado por Scala en nuestro código
